@@ -23,7 +23,9 @@ body {
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)) no-repeat;
+  background-image: url("../../public/background.jpg");
+  background-size: 100%;
 }
 
 @layer utilities {
