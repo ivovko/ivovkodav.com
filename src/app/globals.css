@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../../public/cyberpunk-font/stylesheet.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -34,4 +35,23 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main_name {
+  margin-top: 250px;
+  text-align: center;
+  font-size: 150px;
+  font-family: "cyberpunkregular", Arial, sans-serif;
+  background-image: linear-gradient(
+    #ff00ee 0%,
+    #76006e 40%,
+    #76006e 55%,
+    #ff00ee 70%,
+    #ff9af8 75%,
+    #8a0080 80%,
+    #8a0080 100%
+  );
+  filter: drop-shadow(1px 1px 1px #00ffff) drop-shadow(2px 2px 1px#00ffff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
