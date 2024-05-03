@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "../../public/cyberpunk-font/stylesheet.css";
+@import "../../public/procyon-font/stylesheet.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -54,4 +55,13 @@ body {
   filter: drop-shadow(1px 1px 1px #00ffff) drop-shadow(2px 2px 1px#00ffff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.item {
+  fill: url(#item-grad);
+  filter: drop-shadow(2px 2px 5px #00ffff);
+}
+
+.itemText {
+  font-family: "procyonregular", Arial, sans-serif;
 }
