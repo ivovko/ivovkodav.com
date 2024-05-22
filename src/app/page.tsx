@@ -1,10 +1,16 @@
-import { Item } from "./Item";
+import { NavigationButtons } from "@/frontend/NavigationButtons";
+import { PhotoFrame } from "@/frontend/PhotoFrame";
 
 export default function MainPage() {
   return (
-    <main>
-      <h5 className="main_name">Ihor Vovkodav</h5>
-      <Item content={new Date().toLocaleDateString()} />
+    <main className="flex flex-col w-full">
+      <NavigationButtons />
+      <div className="flex-1 min-h-[911px]">
+        <h5 className="main_name">Ihor Vovkodav</h5>
+      </div>
+      <div className="flex-1 min-h-[911px]">
+        <PhotoFrame photoPath="Elon_Musk_2015.png" />
+      </div>
     </main>
   );
 }

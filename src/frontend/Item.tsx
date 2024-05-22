@@ -6,7 +6,7 @@ interface ItemProps {
 
 export const Item: React.FC<ItemProps> = ({ content }) => {
   return (
-    <svg id="svgelem" width="310" height="60">
+    <svg width="310" height="60">
       <defs>
         <linearGradient id="item-grad">
           <stop offset="0%" stop-color="#FF00EE" />
@@ -21,8 +21,8 @@ export const Item: React.FC<ItemProps> = ({ content }) => {
       <text
         x="50%"
         y="50%"
-        dominant-baseline="middle"
-        text-anchor="middle"
+        dominantBaseline="middle"
+        textAnchor="middle"
         fontSize={40}
         className="itemText"
       >
