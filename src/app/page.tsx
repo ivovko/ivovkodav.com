@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationButtons } from "@/frontend/NavigationButtons";
 import { PhotoFrame } from "@/frontend/PhotoFrame";
 import { TextArea } from "@/frontend/TextArea";
+import { TimeRoad } from "@/frontend/TimeRoad";
 
 export default function MainPage() {
   return (
@@ -14,8 +15,11 @@ export default function MainPage() {
         className="flex min-h-[911px] space-x-[110px] m-auto"
         data-bgcolor="#000000"
       >
-        <PhotoFrame photoPath="Elon_Musk_2015.png" />
+        <PhotoFrame photoPath="personalPhoto.png" />
         <TextArea content="TEST" />
+      </div>
+      <div className="min-h-[911px]">
+        <TimeRoad />
       </div>
     </main>
   );
