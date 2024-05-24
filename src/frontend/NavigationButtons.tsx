@@ -35,11 +35,12 @@ export const NavigationButtons: React.FC = () => {
           {b.polygon}
           <text
             x="50%"
-            y="50%"
+            y="53%"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontSize={16}
+            fontSize={18}
             fill="white"
+            fontFamily="chakra_petchsemibold"
           >
             {b.content}
           </text>

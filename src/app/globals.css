@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import "../../public/cyberpunk-font/stylesheet.css";
 @import "../../public/procyon-font/stylesheet.css";
+@import "../../public/chakrapetch-font/stylesheet.css";
+@import "../../public/baijamjuree-font/stylesheet.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;

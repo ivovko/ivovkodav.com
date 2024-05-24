@@ -1,9 +1,10 @@
 import React from "react";
 import { LogoFrame } from "./LogoFrame";
+import { EventCard } from "./EventCard";
 
 export const TimeRoad: React.FC = () => {
   return (
-    <div className="flex mt-[200px]">
+    <div className="flex mt-[150px]">
       <svg className="flex relative w-[268px] h-[64px] mt-[206px]">
         <g name="first connection">
           <g className="translate-y-[1px]">
@@ -111,6 +112,17 @@ export const TimeRoad: React.FC = () => {
         </g>
       </svg>
       <LogoFrame logoPath="TUMLogo.png" className="mt-[171px]" />
+      <EventCard
+        company="Technical University of Munich"
+        timePeriod="10.2020-CURRENT"
+        content={`During my Computer Science Bachelor's at the Technical University of Munich, i have mastered:
+- Programming: Proficient in Java, Python, C, and more.
+- Systems Knowledge: Deep understanding of operating systems, IT security, and low-level programming.
+- Data Skills: Strong in SQL database management and data analysis with R.
+- Networking: Knowledgeable in network protocols and security.
+- Mathematics and Economics: Well-versed in discrete mathematics, probability, and economic principles.`}
+        className="flex absolute ml-[113px] mt-[398px]"
+      />
       <svg className="flex relative w-[476px] h-[279px] mt-[258px]">
         <g name="second connection">
           <g className="translate-y-[1px]">
@@ -354,8 +366,21 @@ export const TimeRoad: React.FC = () => {
         </g>
       </svg>
       <LogoFrame logoPath="BertrandtLogo.png" className="mt-[436px]" />
+      <EventCard
+        company="Bertrandt Group"
+        timePeriod="08.2021-02.2022"
+        content={`Position: Working Student in the area of App Development Infotainment / Entertainment.
+
+As part of the "In-Car-App Telematik" project, my responsibilities included:
+• Software development of an In-Car App in Javascript
+• Feature development, design, unit testing
+• Software development within the Scrum process
+
+Skills: TypeScript · Node.js · npm · Jest · Jenkins`}
+        className="flex absolute -mt-6 ml-[790px]"
+      />
       <svg className="flex relative w-[389px] h-[334px] mt-[147px]">
-        <g name="second connection">
+        <g name="third connection">
           <g className="translate-y-[1px]">
             <line
               x1={0}
@@ -529,6 +554,21 @@ export const TimeRoad: React.FC = () => {
         </g>
       </svg>
       <LogoFrame logoPath="TeslaLogo.jpg" />
+      <EventCard
+        company="Tesla"
+        timePeriod="10.2023-04.2024"
+        content={`Position: Software Engineering Intern
+
+• Collaboration with product managers and end-users in analyzing functional and non-functional business requirements
+• Close collaboration with engineers and product managers in the development and implementation of efficient and scalable features
+• Development, enhancement, and maintenance of core functionalities
+• Influencing architectural decisions with a focus on security, scalability, and high performance - improving standards and practices to ensure the highest product quality
+• Establishment of document structures/naming schemes and general information management
+
+Skills:  TypeScript / Node.js / npm / Jest / Jenkins / Docker / MySQL / Prisma`}
+        className="flex absolute ml-[1358px] mt-[219px]"
+        height={465}
+      />
     </div>
   );
 };
