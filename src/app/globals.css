@@ -6,6 +6,24 @@
 @import "../../public/chakrapetch-font/stylesheet.css";
 @import "../../public/baijamjuree-font/stylesheet.css";
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #44003f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff00ee;
+  width: 7px;
+}
+
+#customScrollBar::-webkit-scrollbar-track {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -66,4 +84,10 @@ body {
 
 .itemText {
   font-family: "procyonregular", Arial, sans-serif;
+}
+
+.feedbackSection {
+  font-family: "chakra_petchbold", Arial, sans-serif;
+  color: #00ffff;
+  font-size: 40px;
 }
