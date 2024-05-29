@@ -1,32 +1,32 @@
 import React from "react";
-import { NavigationButtons } from "@/frontend/NavigationButtons";
-import { PhotoFrame } from "@/frontend/PhotoFrame";
-import { TextArea } from "@/frontend/TextArea";
-import { TimeRoad } from "@/frontend/TimeRoad";
-import { Comments } from "@/frontend/Comments";
+import { NavigationButtons } from "@/app/frontend/NavigationButtons";
+import { PhotoFrame } from "@/app/frontend/PhotoFrame";
+import { TextArea } from "@/app/frontend/TextArea";
+import { TimeRoad } from "@/app/frontend/TimeRoad";
+import { Comments } from "@/app/frontend/Comments";
+import { InputField } from "@/app/frontend/InputFIeld";
+import { Button } from "@/app/frontend/Button";
+import { FeedbackForm } from "@/app/frontend/FeedbackForm";
 
 export default function MainPage() {
   return (
-    <main className="main flex flex-col w-full overflow-hidden">
+    <main className="main flex flex-col w-full">
       <NavigationButtons />
-      <div className="min-h-[911px] m-auto">
-        <h5 className="main_name">Ihor Vovkodav</h5>
-      </div>
-      <div
-        className="flex min-h-[911px] space-x-[110px] m-auto"
-        data-bgcolor="#000000"
-      >
-        <PhotoFrame photoPath="personalPhoto.png" />
-        <TextArea content="TEST" />
-      </div>
-      <div className="min-h-[911px]">
+      <div className="flex flex-col space-y-64">
+        <div className="h-[911px] m-auto">
+          <h5 className="main_name">Ihor Vovkodav</h5>
+        </div>
+        <div className="flex space-x-[110px] m-auto">
+          <PhotoFrame photoPath="personalPhoto.png" />
+          <TextArea content="TEST" />
+        </div>
         <TimeRoad />
-      </div>
-      <div className="flex flex-col min-h-[911px]">
-        <h3 className="feedbackSection m-auto">WHAT PEOPLE SAY ABOUT ME</h3>
-        <Comments />
-        <h3 className="feedbackSection m-auto">SHARE YOUR THOUGHTS!</h3>
-        <div className="h-[360px]"></div>
+        <div className="flex flex-col space-y-[50px] pb-32">
+          <h3 className="feedbackSection m-auto">WHAT PEOPLE SAY ABOUT ME</h3>
+          <Comments />
+          <h3 className="feedbackSection m-auto">SHARE YOUR THOUGHTS!</h3>
+          <FeedbackForm className="flex flex-col w-[1380px] m-auto space-y-[50px]" />
+        </div>
       </div>
     </main>
   );
