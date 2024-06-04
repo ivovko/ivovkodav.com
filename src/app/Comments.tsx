@@ -1,6 +1,6 @@
 import React from "react";
-import { ListItem } from "./ListItem";
-import { Comment } from "./Comment";
+import { ListItem } from "@/components/ListItem";
+import { Comment } from "@/components/Comment";
 
 export const Comments: React.FC = () => {
   return (

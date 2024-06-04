@@ -1,0 +1,22 @@
+name: "ivovkodav"
+services:
+  app:
+    container_name: "ivovkodav.com"
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+  db:
+    container_name: mysql-server
+    image: mysql:lts
+    environment:
+      MYSQL_DATABASE: "ivovkodav"
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./src/db:/docker-entrypoint-initdb.d

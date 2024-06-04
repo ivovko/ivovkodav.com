@@ -1,6 +1,6 @@
 import React from "react";
-import { LogoFrame } from "./LogoFrame";
-import { EventCard } from "./EventCard";
+import { LogoFrame } from "@/components/LogoFrame";
+import { EventCard } from "@/components/EventCard";
 
 export const TimeRoad: React.FC = () => {
   return (

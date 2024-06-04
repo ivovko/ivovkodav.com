@@ -1,12 +1,10 @@
 import React from "react";
-import { NavigationButtons } from "@/app/frontend/NavigationButtons";
-import { PhotoFrame } from "@/app/frontend/PhotoFrame";
-import { TextArea } from "@/app/frontend/TextArea";
-import { TimeRoad } from "@/app/frontend/TimeRoad";
-import { Comments } from "@/app/frontend/Comments";
-import { InputField } from "@/app/frontend/InputFIeld";
-import { Button } from "@/app/frontend/Button";
-import { FeedbackForm } from "@/app/frontend/FeedbackForm";
+import { NavigationButtons } from "@/components/NavigationButtons";
+import { PhotoFrame } from "@/components/PhotoFrame";
+import { TextArea } from "@/components/TextArea";
+import { TimeRoad } from "@/app/TimeRoad";
+import { Comments } from "@/app/Comments";
+import { FeedbackForm } from "@/app/FeedbackForm";
 
 export default function MainPage() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "./Button";
-import { InputField } from "./InputFIeld";
+import { Button } from "@/components/Button";
+import { InputField } from "@/components/InputFIeld";
 
 interface FeedbackFormProps {
   className: string;
