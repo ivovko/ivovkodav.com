@@ -1,18 +1,14 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
 interface ButtonProps {
   content: string;
+  type: "submit" | "reset" | "button" | undefined;
   className?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ content, className }) => {
-  const handleClick = (event: FormEvent) => {
-    event.preventDefault();
-    console.log("Clicked");
-  };
-
+export const Button: React.FC<ButtonProps> = ({ content, type, className }) => {
   return (
-    <button className="m-auto" onClick={handleClick}>
+    <button type={type} className="m-auto">
       <svg width="302" height="52" className={className}>
         <polygon
           points="0,50 0,20 20,0 300,0 300,30 280,50"

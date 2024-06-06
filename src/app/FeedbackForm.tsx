@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/Button";
 import { InputField } from "@/components/InputFIeld";
+import { submitComment } from "./server/submitComment";
 
 interface FeedbackFormProps {
   className: string;
@@ -9,7 +10,20 @@ interface FeedbackFormProps {
 
 export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
   return (
-    <form className={"block " + className} onSubmit={() => {}}>
+    <form
+      className={"block " + className}
+      onSubmit={(formEvent) => {
+        formEvent.preventDefault();
+
+        const formValues = new FormData(formEvent.currentTarget);
+        submitComment({
+          content: formValues.get("content")?.toString() ?? "",
+          name: formValues.get("name")?.toString(),
+          position: formValues.get("position")?.toString(),
+          company: formValues.get("company")?.toString(),
+        });
+      }}
+    >
       <div className="flex space-x-[44px]">
         <InputField placeHolder="Name..." name="name" />
         <InputField placeHolder="Position..." name="position" />
@@ -21,7 +35,7 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
         name={"content"}
         placeholder={"Your text..."}
       />
-      <Button content="Submit" className="button m-auto" />
+      <Button content="Submit" className="button m-auto" type="submit" />
     </form>
   );
 };

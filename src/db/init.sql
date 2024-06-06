@@ -7,5 +7,3 @@ CREATE TABLE IF NOT EXISTS `comment` (
     `position` TEXT,
     `content` TEXT NOT NULL
 );
-
-

@@ -1,7 +1,9 @@
 import mysql from "mysql2/promise";
 
-export async function getDBClient() {
-  const db = await mysql.createConnection({
+export let db: mysql.Connection;
+
+export async function generateDBClient() {
+  db = await mysql.createConnection({
     host: "localhost",
     database: process.env.MYSQL_DATABASE,
     port: +(process.env.MYSQL_PORT ?? 0),
@@ -10,6 +12,4 @@ export async function getDBClient() {
   });
 
   db.connect();
-
-  return db;
 }
