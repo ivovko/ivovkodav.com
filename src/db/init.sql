@@ -7,3 +7,5 @@ CREATE TABLE IF NOT EXISTS `comment` (
     `position` TEXT,
     `content` TEXT NOT NULL
 );
+
+INSERT INTO `comment` (name, company, position, content) VALUES ("Ihor Vovkav", "Software Developer", "ABC", "TEST TEST TEST");

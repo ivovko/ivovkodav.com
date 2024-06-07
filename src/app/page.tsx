@@ -5,10 +5,8 @@ import { TextArea } from "@/components/TextArea";
 import { TimeRoad } from "@/app/TimeRoad";
 import { Comments } from "@/app/Comments";
 import { FeedbackForm } from "@/app/FeedbackForm";
-import { generateDBClient } from "@/db/db-api";
 
 export default async function MainPage() {
-  await generateDBClient();
   return (
     <main className="main flex flex-col w-full">
       <NavigationButtons />

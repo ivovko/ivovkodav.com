@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/db/db-api";
+import { getDBClient } from "@/db/db-api";
 import { isEmpty } from "lodash";
 
 export async function submitComment(data: {
@@ -9,6 +9,7 @@ export async function submitComment(data: {
   company?: string;
   position?: string;
 }) {
+  const db = await getDBClient();
   try {
     await db.query(
       `INSERT INTO ivovkodav.comment (name, company, position, content) VALUES (${

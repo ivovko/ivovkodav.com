@@ -1,10 +1,16 @@
 import React from "react";
 
 interface ListItemProps {
-  content: string;
+  name?: string;
+  position?: string;
+  company?: string;
 }
 
-export const ListItem: React.FC<ListItemProps> = ({ content }) => {
+export const ListItem: React.FC<ListItemProps> = ({
+  name,
+  position,
+  company,
+}) => {
   return (
     <svg width="302" height="57">
       <polygon
@@ -19,14 +25,23 @@ export const ListItem: React.FC<ListItemProps> = ({ content }) => {
         className="translate-x-[1px] translate-y-[1px] stroke-1 stroke-[#FF00EE]"
       />
       <text
-        x="50%"
-        y="60%"
-        dominantBaseline="middle"
-        textAnchor="middle"
-        fontSize={40}
+        x="20"
+        y="25"
+        fontSize={16}
         fill="#FF00EE"
+        fontFamily="chakra_petchitalic"
       >
-        {content}
+        {name}
+      </text>
+      <text
+        x="280px"
+        y="45px"
+        fontSize={16}
+        fill="#FF00EE"
+        textAnchor="end"
+        fontFamily="chakra_petchsemibold"
+      >
+        {position + " at " + company}
       </text>
     </svg>
   );
