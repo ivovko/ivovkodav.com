@@ -5,12 +5,14 @@ import { InputField } from "@/components/InputFIeld";
 import { submitComment } from "./server-actions/submitComment";
 import { useForm } from "react-hook-form";
 import { ZodError } from "zod";
+import { useAddFeedback } from "./queries";
 
 interface FeedbackFormProps {
   className: string;
 }
 
 export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
+  const addFeedbackMutation = useAddFeedback();
   const form = useForm<CreateFeedback>();
   const { register, handleSubmit } = form;
 
@@ -19,7 +21,7 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
       className={"block " + className}
       onSubmit={handleSubmit((data: CreateFeedback) => {
         try {
-          submitComment({
+          addFeedbackMutation.mutate({
             content: data.content,
             name: data.name,
             company: data.company,

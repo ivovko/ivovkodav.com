@@ -1,4 +1,5 @@
 type Feedback = {
+  id: number;
   name?: string;
   company?: string;
   position?: string;
