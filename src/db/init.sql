@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `comment` (
     `content` TEXT NOT NULL
 );
 
-INSERT INTO `comment` (name, company, position, content) VALUES ("Ihor Vovkav", "Software Developer", "ABC", "TEST TEST TEST");
+INSERT INTO `comment` (name, company, position, content) VALUES ("Ihor Vovkodav", "ABC", "Software Developer", "TEST");
