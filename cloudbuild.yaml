@@ -1,5 +1,5 @@
 steps:
-  - name: "docker/compose:2.27.0"
+  - name: "docker/compose:lts"
     args: ["up", "-d"]
 options:
   logging: CLOUD_LOGGING_ONLY
