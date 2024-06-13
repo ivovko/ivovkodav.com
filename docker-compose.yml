@@ -1,4 +1,3 @@
-name: ivovkodav
 services:
   app:
     container_name: "ivovkodav.com"
