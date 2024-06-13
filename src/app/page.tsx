@@ -58,7 +58,7 @@ function CollorChangeOnScroll(update: Function) {
       });
     });
     return () => {};
-  }, []);
+  }, [update]);
 }
 
 export default function MainPage() {

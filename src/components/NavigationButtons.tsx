@@ -73,9 +73,9 @@ export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
       {buttons.map((b) => {
         const isSelected = b.class.includes(selected);
         return (
-          <Link to={b.class[0]} smooth={true}>
+          <Link key={b.content} to={b.class[0]} smooth={true}>
             <button>
-              <svg key={b.content} width="186" height="70">
+              <svg width="186" height="70">
                 {b.polygon(isSelected)}
 
                 <text
