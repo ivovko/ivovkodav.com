@@ -1,4 +1,3 @@
-version: 2.27.0
 name: ivovkodav
 services:
   app:
