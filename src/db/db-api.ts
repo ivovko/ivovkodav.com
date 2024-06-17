@@ -10,7 +10,7 @@ export async function getDBClient() {
   }
 
   db = createPool({
-    host: "mysql",
+    host: "db",
     database: process.env.MYSQL_DATABASE,
     port: 3306,
     user: "root",
