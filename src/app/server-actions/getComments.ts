@@ -2,11 +2,13 @@
 
 import { getDBClient } from "@/db/db-api";
 
-export async function getComments() {
+export async function getComments(): Promise<Feedback[]> {
   const db = await getDBClient();
   try {
-    return (await db.execute(`SELECT * FROM comment`))[0];
+    const queryResult = await db.execute(`SELECT * FROM comment`);
+    return queryResult[0] as Feedback[];
   } catch (err) {
-    console.log(err);
+    console.log(`Failed to query data from database: ${err}`);
+    throw err;
   }
 }

@@ -8,11 +8,12 @@ export async function getDBClient() {
   if (typeof db !== "undefined") {
     return db;
   }
+
   db = createPool({
-    host: "localhost",
+    host: "mysql",
     database: process.env.MYSQL_DATABASE,
-    port: +(process.env.MYSQL_PORT ?? 0),
-    user: process.env.MYSQL_USER,
+    port: 3306,
+    user: "root",
     password: process.env.MYSQL_PASSWORD,
   });
 

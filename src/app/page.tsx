@@ -9,7 +9,6 @@ import { Comments } from "@/app/Comments";
 import { FeedbackForm } from "@/app/FeedbackForm";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Link } from "react-scroll";
 
 function CollorChangeOnScroll(update: Function) {
   useEffect(() => {
