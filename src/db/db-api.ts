@@ -12,6 +12,8 @@ export async function getDBClient() {
     return db;
   }
 
+  console.log(process.env.MYSQL_PASSWORD, process.env.MYSQL_PORT);
+
   db = createPool({
     host: process.env.MYSQL_HOST,
     database: process.env.MYSQL_DATABASE,
