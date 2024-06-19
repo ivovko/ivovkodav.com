@@ -1,9 +1,6 @@
 "use server";
 
 import { Pool, createPool } from "mysql2/promise";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 let db: Pool | undefined = undefined;
 
@@ -11,8 +8,6 @@ export async function getDBClient() {
   if (typeof db !== "undefined") {
     return db;
   }
-
-  console.log(process.env.MYSQL_PASSWORD, process.env.MYSQL_PORT);
 
   db = createPool({
     host: process.env.MYSQL_HOST,
