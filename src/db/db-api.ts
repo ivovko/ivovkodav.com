@@ -1,6 +1,9 @@
 "use server";
 
 import { Pool, createPool } from "mysql2/promise";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 let db: Pool | undefined = undefined;
 
