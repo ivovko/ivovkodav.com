@@ -6,7 +6,7 @@ interface PhotoFrameProps {
 
 export const PhotoFrame: React.FC<PhotoFrameProps> = ({ photoPath }) => {
   return (
-    <svg width="480" height="680" className="flex">
+    <svg width={480} height={680}>
       <polygon
         points="0,23 0,102 6,113 6,323 0,335 0,647 23,670 68,670 74,664 396,664 402,670 447,670 470,647 470,23 447,0 393,0 388,6 293,6 288,0 23,0"
         fill="black"

@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/Button";
 import { InputField } from "@/components/InputFIeld";
-import { submitComment } from "./server-actions/submitComment";
 import { useForm } from "react-hook-form";
 import { ZodError } from "zod";
 import { useAddFeedback } from "./queries";
@@ -18,7 +17,7 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
 
   return (
     <form
-      className={"block " + className}
+      className={className}
       onSubmit={handleSubmit((data: CreateFeedback) => {
         try {
           addFeedbackMutation.mutate({
@@ -33,7 +32,7 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
         }
       })}
     >
-      <div className="flex space-x-[44px]">
+      <div className="flex justify-between">
         <InputField
           placeHolder="Name... (Optional)"
           name="name"
@@ -51,7 +50,7 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
         />
       </div>
       <textarea
-        className="flex inputText bg-black outline outline-[#00FFFF] h-[160px] resize-none"
+        className="inputText flex bg-black outline outline-[#00FFFF] h-[160px] resize-none"
         id="textAreaScrollBar"
         placeholder={"Your text..."}
         {...form.register("content")}

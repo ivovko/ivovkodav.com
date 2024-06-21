@@ -4,8 +4,8 @@ import { EventCard } from "@/components/EventCard";
 
 export const TimeRoad: React.FC = () => {
   return (
-    <div className="flex mt-[150px]">
-      <svg className="flex relative w-[268px] h-[64px] mt-[206px]">
+    <svg width={1920} height={911}>
+      <svg y={256}>
         <g name="first connection">
           <g className="translate-y-[1px]">
             <line
@@ -111,8 +111,10 @@ export const TimeRoad: React.FC = () => {
           </g>
         </g>
       </svg>
-      <LogoFrame logoPath="TUMLogo.png" className="mt-[171px]" />
+      <LogoFrame x={268} y={221} logoPath="TUMLogo.png" />
       <EventCard
+        x={113}
+        y={448}
         company="Technical University of Munich"
         timePeriod="10.2020-CURRENT"
         content={`During my Computer Science Bachelor's at the Technical University of Munich, i have mastered:
@@ -121,9 +123,8 @@ export const TimeRoad: React.FC = () => {
 - Data Skills: Strong in SQL database management and data analysis with R.
 - Networking: Knowledgeable in network protocols and security.
 - Mathematics and Economics: Well-versed in discrete mathematics, probability, and economic principles.`}
-        className="flex absolute ml-[113px] mt-[398px]"
       />
-      <svg className="flex relative w-[476px] h-[279px] mt-[258px]">
+      <svg x={458} y={308}>
         <g name="second connection">
           <g className="translate-y-[1px]">
             <line
@@ -365,8 +366,9 @@ export const TimeRoad: React.FC = () => {
           </g>
         </g>
       </svg>
-      <LogoFrame logoPath="BertrandtLogo.png" className="mt-[436px]" />
+      <LogoFrame x={934} y={486} logoPath="BertrandtLogo.png" />
       <EventCard
+        x={779}
         company="Bertrandt Group"
         timePeriod="08.2021-02.2022"
         content={`Position: Working Student in the area of App Development Infotainment / Entertainment.
@@ -377,9 +379,8 @@ As part of the "In-Car-App Telematik" project, my responsibilities included:
 • Software development within the Scrum process
 
 Skills: TypeScript · Node.js · npm · Jest · Jenkins`}
-        className="flex absolute -mt-6 ml-[790px]"
       />
-      <svg className="flex relative w-[389px] h-[334px] mt-[147px]">
+      <svg x={1124} y={196.5}>
         <g name="third connection">
           <g className="translate-y-[1px]">
             <line
@@ -553,8 +554,10 @@ Skills: TypeScript · Node.js · npm · Jest · Jenkins`}
           </g>
         </g>
       </svg>
-      <LogoFrame logoPath="TeslaLogo.jpg" />
+      <LogoFrame x={1513} y={50} logoPath="TeslaLogo.jpg" />
       <EventCard
+        x={1358}
+        y={269}
         company="Tesla"
         timePeriod="10.2023-04.2024"
         content={`Position: Software Engineering Intern
@@ -566,9 +569,8 @@ Skills: TypeScript · Node.js · npm · Jest · Jenkins`}
 • Establishment of document structures/naming schemes and general information management
 
 Skills:  TypeScript / Node.js / npm / Jest / Jenkins / Docker / MySQL / Prisma`}
-        className="flex absolute ml-[1358px] mt-[219px]"
         height={465}
       />
-    </div>
+    </svg>
   );
 };

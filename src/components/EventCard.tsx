@@ -4,19 +4,21 @@ interface EventCardProps {
   company: string;
   timePeriod: string;
   content: string;
-  className?: string;
   height?: number;
+  x?: number;
+  y?: number;
 }
 
 export const EventCard: React.FC<EventCardProps> = ({
   company,
   timePeriod,
   content,
-  className,
   height = 340,
+  x,
+  y,
 }) => {
   return (
-    <svg width="510" height={height + 10} className={"flex" + " " + className}>
+    <svg x={x} y={y} width="510" height={height + 10}>
       <polygon
         points={`0,30 0,${height} 500,${height} 500,0 30,0`}
         fill="black"

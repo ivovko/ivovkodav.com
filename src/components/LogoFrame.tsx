@@ -2,15 +2,13 @@ import React from "react";
 
 interface LogoFrameProps {
   logoPath: string;
-  className?: string;
+  x?: number;
+  y?: number;
 }
 
-export const LogoFrame: React.FC<LogoFrameProps> = ({
-  logoPath,
-  className,
-}) => {
+export const LogoFrame: React.FC<LogoFrameProps> = ({ logoPath, x, y }) => {
   return (
-    <svg width="194" height="194" className={"flex" + " " + className}>
+    <svg x={x} y={y} height="194px" width="194px">
       <polygon
         points="0,25 0,190 190,190 190,0 25,0"
         fill="black"

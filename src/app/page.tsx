@@ -66,29 +66,29 @@ export default function MainPage() {
   >("about-me");
   CollorChangeOnScroll(updateSection);
   return (
-    <div className="main w-full flex flex-col">
+    <main className="main w-full inline-block m-auto">
       <NavigationButtons selected={currentSection} />
-      <div className="flex flex-col space-y-64">
+      <div className="flex flex-col space-y-64 justify-evenly">
         <div className="about-me h-[911px] m-auto">
           <h5 className="main_name">Ihor Vovkodav</h5>
         </div>
 
-        <div className="about-me-content flex space-x-[110px] m-auto">
+        <div className="about-me-content flex m-auto space-x-24">
           <PhotoFrame photoPath="personalPhoto.png" />
           <TextArea content="TEST" />
         </div>
 
-        <div className="experience min-h-screen">
+        <div className="experience m-auto">
           <TimeRoad />
         </div>
 
-        <div className="feedback min-h-screen flex flex-col space-y-[50px] pb-32">
+        <div className="feedback flex flex-col space-y-[50px] pb-32">
           <h3 className="feedbackSection m-auto">WHAT PEOPLE SAY ABOUT ME</h3>
           <Comments />
           <h3 className="feedbackSection m-auto">SHARE YOUR THOUGHTS!</h3>
           <FeedbackForm className="flex flex-col w-[1380px] m-auto space-y-[50px]" />
         </div>
       </div>
-    </div>
+    </main>
   );
 }

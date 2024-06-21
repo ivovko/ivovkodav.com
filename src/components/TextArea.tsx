@@ -6,7 +6,7 @@ interface TextAreaProps {
 
 export const TextArea: React.FC<TextAreaProps> = ({ content }) => {
   return (
-    <svg width="1100" height="680" className="flex">
+    <svg width={1100} height={680}>
       <polygon
         points="0,30 0,670 1090,670 1090,0 30,0"
         fill="black"
