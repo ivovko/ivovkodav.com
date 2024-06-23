@@ -50,13 +50,13 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
         />
       </div>
       <textarea
-        className="inputText flex bg-black outline outline-[#00FFFF] h-[160px] resize-none"
+        className="inputText flex bg-black outline outline-[#00FFFF] resize-none h-[30%]"
         id="textAreaScrollBar"
         placeholder={"Your text..."}
         {...form.register("content")}
         required
       />
-      <Button content="Submit" className="button m-auto" type="submit" />
+      <Button content="Submit" className="button" type="submit" />
     </form>
   );
 };

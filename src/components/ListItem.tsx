@@ -14,7 +14,7 @@ export const ListItem: React.FC<ListItemProps> = ({
   const color = chosen ? "#00FFFF" : "#FF00EE";
   return (
     <button onClick={onClick}>
-      <svg width="302" height="57">
+      <svg viewBox="0 0 302 57" width="100%" height="100%">
         <polygon
           points="0,0 35,0 40,5 300,5 300,35 280,55 40,55 35,50 0,50 0,45 2,43 2,22 0,20"
           className={`stroke-1 stroke-[${color}] translate-x-[1px] translate-y-[1px]`}

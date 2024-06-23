@@ -16,7 +16,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 
   return (
     <input
-      className="flex inputText bg-black outline outline-[#00FFFF] w-[430px] h-[50px] items-center"
+      className="inputText flex bg-black outline outline-[#00FFFF] items-center w-[30%]"
       type="text"
       placeholder={placeHolder}
       {...register(name)}

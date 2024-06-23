@@ -1,18 +1,61 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-interface NavigationButtonsProps {
-  selected:
-    | "about-me"
-    | "about-me-content"
-    | "experience"
-    | "projects"
-    | "feedback";
-}
+export const NavigationButtons: React.FC = () => {
+  const [currentSection, updateSection] = useState<string>("about-me");
 
-export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
-  selected,
-}) => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = [
+      {
+        sectionClass: "about-me",
+        bgcolor: "rgba(0,0,0,0)",
+      },
+      {
+        sectionClass: "about-me-content",
+        bgcolor: "rgba(0,0,0,0.8)",
+      },
+      {
+        sectionClass: "experience",
+        bgcolor: "rgba(0,0,0,0.8)",
+      },
+      {
+        sectionClass: "feedback",
+        bgcolor: "rgba(0,0,0,0.8)",
+      },
+    ];
+
+    sections.forEach((section, i) => {
+      const prevSection = i - 1 >= 0 ? sections[i - 1] : sections[0];
+
+      ScrollTrigger.create({
+        trigger: "." + section.sectionClass,
+        start: "top center",
+        end: "bottom",
+        onEnter: () => {
+          updateSection(section.sectionClass);
+          gsap.to(".main", {
+            backgroundColor: section.bgcolor,
+            overwrite: "auto",
+          });
+        },
+        onLeaveBack: () => {
+          updateSection(prevSection.sectionClass);
+          gsap.to(".main", {
+            backgroundColor: prevSection.bgcolor,
+            overwrite: "auto",
+          });
+        },
+      });
+    });
+    return () => {};
+  }, []);
+
   const buttons = [
     {
       polygon: (selected: boolean) => (
@@ -69,9 +112,9 @@ export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
   ];
 
   return (
-    <nav className="flex fixed mt-9 left-1/2 -translate-x-1/2 z-10 -space-x-0.5">
+    <nav className="flex fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5">
       {buttons.map((b) => {
-        const isSelected = b.class.includes(selected);
+        const isSelected = b.class.includes(currentSection);
         return (
           <Link key={b.content} to={b.class[0]} smooth={true}>
             <button>

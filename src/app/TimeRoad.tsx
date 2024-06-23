@@ -4,7 +4,7 @@ import { EventCard } from "@/components/EventCard";
 
 export const TimeRoad: React.FC = () => {
   return (
-    <svg width={1920} height={911}>
+    <svg viewBox="0 0 1920 911" width="100%" height="100%">
       <svg y={256}>
         <g name="first connection">
           <g className="translate-y-[1px]">

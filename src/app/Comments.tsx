@@ -2,17 +2,22 @@
 
 import React, { useState } from "react";
 import { ListItem } from "@/components/ListItem";
-import { Comment } from "@/components/Comment";
 import { useFeedbackList } from "./queries";
 
-export const Comments: React.FC = () => {
+interface CommentList {
+  className?: string;
+}
+
+export const CommentList: React.FC<CommentList> = ({ className }) => {
   const feedbackList = useFeedbackList();
   const [chosenFeedback, chooseFeedback] = useState<Feedback>();
 
   return (
-    <div className="flex outline-4 outline outline-[#FF00EE] w-[1400px] h-[250px] m-auto">
+    <div
+      className={`flex outline outline-4 outline-[#FF00EE] space-x-[1%] p-[1%] ${className}`}
+    >
       <div
-        className="mt-[5px] ml-[10px] space-y-0.5 h-[235px] w-[325px] overflow-y-scroll"
+        className="pr-[1%] flex flex-col space-y-[0.5%] overflow-y-auto w-[28%]"
         id="customScrollBar"
       >
         {feedbackList.map((feedback) =>
@@ -34,8 +39,13 @@ export const Comments: React.FC = () => {
           )
         )}
       </div>
+
       {chosenFeedback && (
-        <Comment content={chosenFeedback.content} className="m-auto mt-1" />
+        <div className="w-[70%] bg-black outline-4 outline outline-[#00FFFF] overflow-y-scroll">
+          <div className="inputText p-[1%] text-[#00FFFF] text-justify">
+            {chosenFeedback.content}
+          </div>
+        </div>
       )}
     </div>
   );

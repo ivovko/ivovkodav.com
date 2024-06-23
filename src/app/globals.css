@@ -11,6 +11,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-size: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,9 +36,7 @@ body {
 }
 
 .main_name {
-  margin-top: 250px;
-  text-align: center;
-  font-size: 150px;
+  font-size: 10em;
   font-family: "cyberpunkregular", Arial, sans-serif;
   background-image: linear-gradient(
     #ff00ee 0%,
@@ -74,7 +73,7 @@ textarea::placeholder {
 .inputText {
   font-family: "bai_jamjureemedium", Arial, sans-serif;
   color: #00ffff;
-  font-size: 20px;
+  font-size: 1vw;
   padding: 10px;
 }
 
