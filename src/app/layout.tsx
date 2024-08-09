@@ -22,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"main flex justify-evenly " + inter.className}>
+      <body
+        className={
+          "main flex justify-evenly overflow-x-scroll" + inter.className
+        }
+      >
         <NavigationButtons />
         {children}
       </body>
