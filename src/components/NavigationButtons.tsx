@@ -37,6 +37,7 @@ export const NavigationButtons: React.FC = () => {
         trigger: "." + section.sectionClass,
         start: "top center",
         end: "bottom",
+        markers: true,
         onEnter: () => {
           updateSection(section.sectionClass);
           gsap.to(".main", {
@@ -112,13 +113,13 @@ export const NavigationButtons: React.FC = () => {
   ];
 
   return (
-    <nav className="flex fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5">
+    <nav className="flex justify-center fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5">
       {buttons.map((b) => {
         const isSelected = b.class.includes(currentSection);
         return (
           <Link key={b.content} to={b.class[0]} smooth={true}>
             <button>
-              <svg width="186" height="70">
+              <svg viewBox="0 0 186 70" width="100%" height="100%">
                 {b.polygon(isSelected)}
 
                 <text

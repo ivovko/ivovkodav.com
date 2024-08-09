@@ -56,7 +56,9 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({ className }) => {
         {...form.register("content")}
         required
       />
-      <Button content="Submit" className="button" type="submit" />
+      <div className="flex justify-center">
+        <Button content="Submit" className="button w-[30%]" type="submit" />
+      </div>
     </form>
   );
 };

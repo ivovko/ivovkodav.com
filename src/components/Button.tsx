@@ -8,8 +8,8 @@ interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({ content, type, className }) => {
   return (
-    <button type={type} className="m-auto">
-      <svg width="302" height="52" className={className}>
+    <button type={type} className={`bg-center ${className}`}>
+      <svg viewBox="0 0 302 52" width="100%" height="100%">
         <polygon
           points="0,50 0,20 20,0 300,0 300,30 280,50"
           className="bg-black stroke-1 stroke-[#FF00EE] translate-x-[1px] translate-y-[1px]"

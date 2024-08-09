@@ -24,9 +24,11 @@
 
 body {
   background-image: url("../../public/background.jpg");
+  background-blend-mode: darken;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  overflow: overlay;
 }
 
 @layer utilities {
@@ -36,7 +38,7 @@ body {
 }
 
 .main_name {
-  font-size: 10em;
+  font-size: 150px;
   font-family: "cyberpunkregular", Arial, sans-serif;
   background-image: linear-gradient(
     #ff00ee 0%,
@@ -105,4 +107,52 @@ textarea::placeholder {
 
 form.hide-submit input[type="submit"] {
   display: none;
+}
+
+.wscreen {
+  width: 1913px;
+}
+
+.hscreen {
+  height: 911px;
+}
+
+.h-about-me {
+  height: 680px;
+}
+
+@media only screen and (min-width: 360px) {
+  .wscreen {
+    width: 353px;
+  }
+  .hscreen {
+    height: 667px;
+  }
+  .feedbackSection {
+    font-size: 15px;
+  }
+  .main_name {
+    font-size: 25px;
+  }
+  .h-about-me {
+    height: 100px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .wscreen {
+    width: 1913px;
+  }
+  .hscreen {
+    height: 911px;
+  }
+  .feedbackSection {
+    font-size: 40px;
+  }
+  .main_name {
+    font-size: 150px;
+  }
+  .h-about-me {
+    height: 680px;
+  }
 }
