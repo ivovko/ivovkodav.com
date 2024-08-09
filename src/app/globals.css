@@ -139,7 +139,7 @@ form.hide-submit input[type="submit"] {
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 700px) {
   .wscreen {
     width: 1913px;
   }

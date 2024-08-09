@@ -37,7 +37,6 @@ export const NavigationButtons: React.FC = () => {
         trigger: "." + section.sectionClass,
         start: "top center",
         end: "bottom",
-        markers: true,
         onEnter: () => {
           updateSection(section.sectionClass);
           gsap.to(".main", {

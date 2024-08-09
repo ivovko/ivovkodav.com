@@ -9,7 +9,7 @@ import { FeedbackForm } from "@/app/FeedbackForm";
 
 export default function MainPage() {
   return (
-    <main className="flex flex-col space-y-[10%] wscreen">
+    <main className="flex flex-col margin-auto space-y-[10%] wscreen">
       <div className="about-me flex text-center items-center justify-center h-screen">
         <h5 className="main_name">Ihor Vovkodav</h5>
       </div>
