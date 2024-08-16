@@ -121,38 +121,20 @@ form.hide-submit input[type="submit"] {
   height: 680px;
 }
 
-@media only screen and (min-width: 360px) {
+@media only screen and (max-width: 699px) {
   .wscreen {
-    width: 353px;
+    width: 390px;
   }
   .hscreen {
-    height: 667px;
+    height: 844px;
   }
   .feedbackSection {
     font-size: 15px;
   }
   .main_name {
-    font-size: 25px;
+    font-size: 60px;
   }
   .h-about-me {
-    height: 100px;
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  .wscreen {
-    width: 1913px;
-  }
-  .hscreen {
-    height: 911px;
-  }
-  .feedbackSection {
-    font-size: 40px;
-  }
-  .main_name {
-    font-size: 150px;
-  }
-  .h-about-me {
-    height: 680px;
+    height: 300px;
   }
 }
