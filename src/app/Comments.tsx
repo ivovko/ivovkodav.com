@@ -14,7 +14,7 @@ export const CommentList: React.FC<CommentList> = ({ className }) => {
 
   return (
     <div
-      className={`flex outline outline-4 outline-[#FF00EE] space-x-[1%] p-[1%] ${className}`}
+      className={`flex outline outline-[0.3vw] outline-[#FF00EE] space-x-[1%] p-[1%] ${className}`}
     >
       <div
         className="pr-[1%] flex flex-col space-y-[0.5%] overflow-y-auto w-[28%]"
@@ -41,7 +41,7 @@ export const CommentList: React.FC<CommentList> = ({ className }) => {
       </div>
 
       {chosenFeedback && (
-        <div className="w-[70%] bg-black outline-4 outline outline-[#00FFFF] overflow-y-scroll">
+        <div className="w-[70%] bg-black outline-[0.3vw] outline outline-[#00FFFF] overflow-y-scroll">
           <div className="inputText p-[1%] text-[#00FFFF] text-justify">
             {chosenFeedback.content}
           </div>

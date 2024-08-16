@@ -57,86 +57,124 @@ export const NavigationButtons: React.FC = () => {
   }, []);
 
   const buttons = [
-    {
-      polygon: (selected: boolean) => (
-        <polygon
-          points="0,0 0,48 16,64 180,64 180,48 176,44 176,20 180,16, 180,0"
-          fill={selected ? "#00FFFF" : "black"}
-          className={`stroke-1 stroke-[${
-            selected ? "black" : "#00FFFF"
-          }] translate-x-[1px] translate-y-[1px]`}
-        />
-      ),
-      class: ["about-me", "about-me-content"],
-      content: "ABOUT ME",
-    },
-    {
-      polygon: (selected: boolean) => (
-        <polygon
-          points="4,0 4,16 0,20 0,44 4,48 4,64 180,64 180,48 176,44 176,20 180,16, 180,0"
-          fill={selected ? "#00FFFF" : "black"}
-          className={`stroke-1 stroke-[${
-            selected ? "black" : "#00FFFF"
-          }] translate-x-[1px] translate-y-[1px]`}
-        />
-      ),
-      class: ["experience"],
-      content: "EXPERIENCE",
-    },
-    {
-      polygon: (selected: boolean) => (
-        <polygon
-          points="4,0 4,16 0,20 0,44 4,48 4,64 176,64 176,48 180,44 180,20 176,16, 176,0"
-          fill={selected ? "#00FFFF" : "black"}
-          className={`stroke-1 stroke-[${
-            selected ? "black" : "#00FFFF"
-          }] translate-x-[1px] translate-y-[1px]`}
-        />
-      ),
-      class: ["projects"],
-      content: "PROJECTS",
-    },
-    {
-      polygon: (selected: boolean) => (
-        <polygon
-          points="0,0 0,16 4,20 4,44 0,48 0,64 180,64 180,16, 166,0"
-          fill={selected ? "#00FFFF" : "black"}
-          className={`stroke-1 stroke-[${
-            selected ? "black" : "#00FFFF"
-          }] translate-x-[1px] translate-y-[1px]`}
-        />
-      ),
-      class: ["feedback"],
-      content: "FEEDBACK",
-    },
+    <Link key={"about-me"} to={"about-me"} smooth={true}>
+      <button>
+        <svg viewBox="0 0 186 70" width="100%" height="100%">
+          <polygon
+            points="0,0 0,48 16,64 180,64 180,48 176,44 176,20 180,16, 180,0"
+            fill={
+              currentSection == "about-me" ||
+              currentSection == "about-me-content"
+                ? "#00FFFF"
+                : "black"
+            }
+            className={`stroke-1 stroke-[${
+              currentSection == "about-me" ||
+              currentSection == "about-me-content"
+                ? "black"
+                : "#00FFFF"
+            }] translate-x-[1px] translate-y-[1px]`}
+          />
+
+          <text
+            x="50%"
+            y="51%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontSize={18}
+            fill={
+              currentSection == "about-me" ||
+              currentSection == "about-me-content"
+                ? "black"
+                : "#00FFFF"
+            }
+            fontFamily="chakra_petchsemibold"
+          >
+            ABOUT ME
+          </text>
+        </svg>
+      </button>
+    </Link>,
+    <Link key={"experience"} to={"experience"} smooth={true}>
+      <button>
+        <svg viewBox="0 0 186 70" width="100%" height="100%">
+          <polygon
+            points="4,0 4,16 0,20 0,44 4,48 4,64 180,64 180,48 176,44 176,20 180,16, 180,0"
+            fill={currentSection == "experience" ? "#00FFFF" : "black"}
+            className={`stroke-1 stroke-[${
+              currentSection == "experience" ? "black" : "#00FFFF"
+            }] translate-x-[1px] translate-y-[1px]`}
+          />
+
+          <text
+            x="50%"
+            y="51%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontSize={18}
+            fill={currentSection == "experience" ? "black" : "#00FFFF"}
+            fontFamily="chakra_petchsemibold"
+          >
+            EXPERIENCE
+          </text>
+        </svg>
+      </button>
+    </Link>,
+    <Link key={"projects"} to={"projects"} smooth={true}>
+      <button>
+        <svg viewBox="0 0 186 70" width="100%" height="100%">
+          <polygon
+            points="4,0 4,16 0,20 0,44 4,48 4,64 176,64 176,48 180,44 180,20 176,16, 176,0"
+            fill={currentSection == "projects" ? "#00FFFF" : "black"}
+            className={`stroke-1 stroke-[${
+              currentSection == "projects" ? "black" : "#00FFFF"
+            }] translate-x-[1px] translate-y-[1px]`}
+          />
+
+          <text
+            x="50%"
+            y="51%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontSize={18}
+            fill={currentSection == "projects" ? "black" : "#00FFFF"}
+            fontFamily="chakra_petchsemibold"
+          >
+            PROJECTS
+          </text>
+        </svg>
+      </button>
+    </Link>,
+    <Link key={"feedback"} to={"feedback"} smooth={true}>
+      <button>
+        <svg viewBox="0 0 186 70" width="100%" height="100%">
+          <polygon
+            points="0,0 0,16 4,20 4,44 0,48 0,64 180,64 180,16, 166,0"
+            fill={currentSection == "feedback" ? "#00FFFF" : "black"}
+            className={`stroke-1 stroke-[${
+              currentSection == "feedback" ? "black" : "#00FFFF"
+            }] translate-x-[1px] translate-y-[1px]`}
+          />
+
+          <text
+            x="50%"
+            y="51%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontSize={18}
+            fill={currentSection == "feedback" ? "black" : "#00FFFF"}
+            fontFamily="chakra_petchsemibold"
+          >
+            FEEDBACK
+          </text>
+        </svg>
+      </button>
+    </Link>,
   ];
 
   return (
     <nav className="flex justify-center fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5 wnav">
-      {buttons.map((b) => {
-        const isSelected = b.class.includes(currentSection);
-        return (
-          <Link key={b.content} to={b.class[0]} smooth={true}>
-            <button>
-              <svg viewBox="0 0 186 70" width="100%" height="100%">
-                {b.polygon(isSelected)}
-
-                <text
-                  x="50%"
-                  y="51%"
-                  dominantBaseline="middle"
-                  textAnchor="middle"
-                  fontSize={18}
-                  fill={isSelected ? "black" : "#00FFFF"}
-                  fontFamily="chakra_petchsemibold"
-                >
-                  {b.content}
-                </text>
-              </svg>
-            </button>
-          </Link>
-        );
-      })}
+      {buttons}
     </nav>
   );
 };

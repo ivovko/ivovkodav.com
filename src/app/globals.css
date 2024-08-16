@@ -133,6 +133,10 @@ form.hide-submit input[type="submit"] {
   width: 50%;
 }
 
+.h-comments {
+  height: 30%;
+}
+
 @media only screen and (max-width: 699px) {
   .wscreen {
     width: 390px;
@@ -149,8 +153,10 @@ form.hide-submit input[type="submit"] {
   .h-about-me {
     height: 120px;
   }
-
   .wnav {
     width: 90%;
+  }
+  .h-comments {
+    height: 10%;
   }
 }

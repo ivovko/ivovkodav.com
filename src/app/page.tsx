@@ -27,7 +27,7 @@ export default function MainPage() {
         <h3 className="feedbackSection text-center">
           WHAT PEOPLE SAY ABOUT ME
         </h3>
-        <CommentList className="h-[30%] w-full" />
+        <CommentList className="h-comments w-full" />
         <h3 className="feedbackSection text-center">SHARE YOUR THOUGHTS!</h3>
         <FeedbackForm className="flex flex-col w-full h-full space-y-[4%]" />
       </div>
