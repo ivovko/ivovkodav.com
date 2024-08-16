@@ -137,4 +137,8 @@ form.hide-submit input[type="submit"] {
   .h-about-me {
     height: 300px;
   }
+
+  body {
+    background-attachment: initial;
+  }
 }
