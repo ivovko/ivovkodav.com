@@ -63,19 +63,19 @@ body {
 input::placeholder {
   font-family: "chakra_petchitalic", Arial, sans-serif;
   color: #00ffff;
-  font-size: 20px;
+  font-size: 1.5vh;
 }
 
 textarea::placeholder {
   font-family: "chakra_petchitalic", Arial, sans-serif;
   color: #00ffff;
-  font-size: 20px;
+  font-size: 1.5vh;
 }
 
 .inputText {
   font-family: "bai_jamjureemedium", Arial, sans-serif;
   color: #00ffff;
-  font-size: 1vw;
+  font-size: 1.5vh;
   padding: 10px;
 }
 
@@ -129,7 +129,7 @@ form.hide-submit input[type="submit"] {
     height: 844px;
   }
   .feedbackSection {
-    font-size: 15px;
+    font-size: 40px;
   }
   .main_name {
     font-size: 60px;
