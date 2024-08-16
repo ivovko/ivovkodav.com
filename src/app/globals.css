@@ -129,6 +129,10 @@ form.hide-submit input[type="submit"] {
   height: 680px;
 }
 
+.wnav {
+  width: 50%;
+}
+
 @media only screen and (max-width: 699px) {
   .wscreen {
     width: 390px;
@@ -144,5 +148,9 @@ form.hide-submit input[type="submit"] {
   }
   .h-about-me {
     height: 120px;
+  }
+
+  .wnav {
+    width: 90%;
   }
 }

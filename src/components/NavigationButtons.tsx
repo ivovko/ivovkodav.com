@@ -112,7 +112,7 @@ export const NavigationButtons: React.FC = () => {
   ];
 
   return (
-    <nav className="flex justify-center fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5">
+    <nav className="flex justify-center fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5 wnav">
       {buttons.map((b) => {
         const isSelected = b.class.includes(currentSection);
         return (
