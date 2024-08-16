@@ -133,7 +133,7 @@ form.hide-submit input[type="submit"] {
 
 @media only screen and (max-width: 699px) {
   .wscreen {
-    width: 450px;
+    width: 390px;
   }
   .hscreen {
     height: 900px;
@@ -145,6 +145,6 @@ form.hide-submit input[type="submit"] {
     font-size: 60px;
   }
   .h-about-me {
-    height: 150px;
+    height: 140px;
   }
 }
