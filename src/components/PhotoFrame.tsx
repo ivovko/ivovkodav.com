@@ -14,7 +14,7 @@ export const PhotoFrame: React.FC<PhotoFrameProps> = ({ photoPath }) => {
         strokeWidth={4}
         className="translate-x-1 translate-y-1"
       />
-      <image href={photoPath} width={430} height={630} x={25} y={25} />
+      <image href={photoPath} width={430} height={630} x={23} y={23} />
     </svg>
   );
 };

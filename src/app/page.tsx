@@ -8,6 +8,13 @@ import { CommentList } from "@/app/Comments";
 import { FeedbackForm } from "@/app/FeedbackForm";
 
 export default function MainPage() {
+  const test = `Hello there!
+  
+I'm Ihor Vovkodav, a computer science student at the Technical University of Munich. My journey in the tech world has been an exciting one, marked by hands-on experience in leading companies like Bertrandt and Tesla. These opportunities have allowed me to work on a diverse range of projects, deepening my skills and fueling my passion for innovation.
+  
+This website is more than just a portfolio—it's a catalog of my personal projects and a platform for sharing my work with the world. I also see it as an open space for feedback, where I welcome any thoughts or insights you might have about my work. Your input is valuable to me, and I'm always eager to learn and grow through constructive dialogue.
+
+Feel free to connect with me! I'm always open to new opportunities, collaborations, or just a good conversation about tech.`;
   return (
     <main className="flex flex-col margin-auto space-y-[10%] wscreen">
       <div className="about-me flex text-center items-center justify-center h-screen">
@@ -16,7 +23,7 @@ export default function MainPage() {
 
       <div className={`about-me-content flex justify-evenly w-full h-about-me`}>
         <PhotoFrame photoPath="personalPhoto.jpg" />
-        <TextArea content="TEST" />
+        <TextArea content={test} />
       </div>
 
       <div className="experience h-fit">
