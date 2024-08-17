@@ -39,14 +39,14 @@ export const NavigationButtons: React.FC = () => {
         end: "bottom",
         onEnter: () => {
           updateSection(section.sectionClass);
-          gsap.to(".main", {
+          gsap.to(".bg", {
             backgroundColor: section.bgcolor,
             overwrite: "auto",
           });
         },
         onLeaveBack: () => {
           updateSection(prevSection.sectionClass);
-          gsap.to(".main", {
+          gsap.to(".bg", {
             backgroundColor: prevSection.bgcolor,
             overwrite: "auto",
           });
@@ -95,7 +95,7 @@ export const NavigationButtons: React.FC = () => {
         </svg>
       </button>
     </Link>,
-    <Link key={"experience"} to={"experience"} smooth={true}>
+    <Link key={"experience"} to={"experience"} smooth={true} offset={-100}>
       <button>
         <svg viewBox="0 0 186 70" width="100%" height="100%">
           <polygon
@@ -145,7 +145,7 @@ export const NavigationButtons: React.FC = () => {
         </svg>
       </button>
     </Link>,
-    <Link key={"feedback"} to={"feedback"} smooth={true}>
+    <Link key={"feedback"} to={"feedback"} smooth={true} offset={-100}>
       <button>
         <svg viewBox="0 0 186 70" width="100%" height="100%">
           <polygon
@@ -173,7 +173,7 @@ export const NavigationButtons: React.FC = () => {
   ];
 
   return (
-    <nav className="flex justify-center fixed pt-8 left-1/2 -translate-x-1/2 z-10 -space-x-0.5 wnav">
+    <nav className="flex justify-center fixed pt-6 z-10 px-[5vw]">
       {buttons}
     </nav>
   );

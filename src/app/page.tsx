@@ -15,7 +15,7 @@ export default function MainPage() {
       </div>
 
       <div className={`about-me-content flex justify-evenly w-full h-about-me`}>
-        <PhotoFrame photoPath="personalPhoto.png" />
+        <PhotoFrame photoPath="personalPhoto.jpg" />
         <TextArea content="TEST" />
       </div>
 
