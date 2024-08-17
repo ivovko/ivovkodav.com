@@ -145,7 +145,7 @@ export const NavigationButtons: React.FC = () => {
         </svg>
       </button>
     </Link>,
-    <Link key={"feedback"} to={"feedback"} smooth={true} offset={-150}>
+    <Link key={"feedback"} to={"feedback"} smooth={true} offset={-100}>
       <button>
         <svg viewBox="0 0 186 70" width="100%" height="100%">
           <polygon
