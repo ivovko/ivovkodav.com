@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"main flex justify-center " + inter.className}>
-        <div className="bg"></div>
+      <body className={"main flex justify-evenly " + inter.className}>
+        <div className="bg" />
         <NavigationButtons />
         {children}
       </body>
